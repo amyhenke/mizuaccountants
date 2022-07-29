@@ -7,7 +7,6 @@ var enterKeyCode = 13
 var spaceKeyCode = 32
 
 menulabel.addEventListener("keyup", function (event) {
-    console.log(event.keyCode)
     if (event.keyCode == enterKeyCode || event.keyCode == spaceKeyCode) {
         var menuOpen = menutoggle.checked
 
