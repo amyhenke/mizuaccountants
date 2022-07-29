@@ -1,0 +1,31 @@
+---
+import Head from '../components/Head.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from "../components/Footer.astro";
+
+export interface Props {
+	seo?: Props;
+}
+
+const { seo } = Astro.props;
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<Head {...seo} />
+
+<body>
+	<Navigation />
+	<a href="#about" id="skip-main">Skip to main content</a>
+
+	<main class="min-h-screen w-full max-w-screen-2xl mx-auto" id="index">
+		<slot />
+	</main>
+	<Footer />
+</body>
+<link href="/fontawesome/css/all.css" rel="stylesheet">
+<script>import "../scripts/index.js"; </script>
+
+</html>

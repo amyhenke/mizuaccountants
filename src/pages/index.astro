@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from "../components/Card.astro";
+
+const seo = {
+	title: "Mizu Accounting",
+	description: "Freelance accountant providing servcies for small businesses in the UK",
+	image: '../socialbanner.png'
+}
+
+---
+
+<Layout {seo}>
+	<section class="hero max-w-screen-lg mx-auto min-h-screen flex justify-center align-center flex-col text-white p-5"
+		data-perspective-group>
+		<h1 class="text-7xl mb-2" data-perspective="header">mizu accounting</h1>
+		<h2 class="text-xl">We are here to make your life easier.</h2>
+		<div class="videocontainer self-end pt-10" data-perspective="image">
+			<video autoplay loop muted src="/writing.mp4"></video>
+		</div>
+	</section>
+
+	<section id="about"
+		class="max-w-screen-md mx-auto flex justify-center align-center flex-col text-white p-5 pt-20 text-center">
+		<h2 class="text-3xl sm:text-5xl mb-8 text-white bold">Accounting done by accountants.</h2>
+		<p class="mb-2.5">Simplify your life. Let our trained accountants take care of the day-to-day admin while
+			you focus on your business.</p>
+		<p class="mb-2.5">By using the latest accounting software we remove the hassle of chasing invoices, filing
+			submissions, and many other essential administrative functions required to run a successful business.
+		</p>
+	</section>
+
+	<section id="services" class="max-w-screen-xl mx-auto p-5 pt-20">
+		<h2 class="text-3xl sm:text-5xl mb-8 text-white text-center bold">Services we provide</h2>
+		<ul role="list" class="link-card-grid">
+			<Card title="Annual Accounts" icon="fa-solid fa-chart-line"
+				body="We produce your company's annual accounts , also called 'statutory accounts’, from the company's financial records at the end of your financial year." />
+			<Card title="Bookkeeping" icon="fa-solid fa-book-open"
+				body="From invoicing to bank reconciliations, we  take care of the daily bookkeeping needs and provide up-to-date information about your business to help you manage your finances." />
+			<Card title="VAT" icon="fa-solid fa-receipt"
+				body="Making Tax Digital? We make Tax simple. If you are VAT registered, we can take care of the necessary digital records needed to file your VAT Returns." />
+			<Card title="Payroll" icon="fa-solid fa-envelope-open-text"
+				body="We prepare and send out your payslips, send a Full Payment Submission ( FPS ) to tell  HMRC about payments to your employees and what deductions you've made and handle employee auto-enrolment." />
+			<Card title="Self-Assessment" icon="fa-solid fa-person"
+				body="Individual or Sole Trader? We prepare and file your self assessment tax returns." />
+			<Card title="Bespoke Consultations" icon="fa-solid fa-handshake-simple"
+				body="Looking for something specific to you and your business’ needs? Simply get in touch and we will happily help or point you in the right direction." />
+		</ul>
+	</section>
+
+	<section id="contact" class="max-w-screen-lg mx-auto text-white p-5 pt-20 mb-20 text-center">
+		<h2 class="text-3xl sm:text-5xl mb-8 text-white bold">Get in Touch</h2>
+		<p class="mb-6">Our friendly staff will be happy to assist you with any queries you may have.</p>
+		<a class="button" href="mailto:michaelshaw10@gmail.com" tabindex="0">Contact</a>
+	</section>
+</Layout>
