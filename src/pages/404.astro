@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const seo = {
+    title: "404 | Mizu Accounting",
+    description: "Freelance accountant providing servcies for small businesses in the UK",
+    image: '../socialbanner.png'
+}
+---
+
+<Layout {seo}>
+    <section
+        class="pagenotfound max-w-screen-lg mx-auto min-h-screen flex justify-center align-center flex-col text-white p-5">
+        <p class="text-xl uppercase">404 Error</p>
+        <h1 class="text-7xl mb-2">Uh oh! I think you're lost.</h1>
+        <h2 class="text-xl">It looks like the page you're looking for doesn't exist.</h2>
+        <a href="/" class="button mt-10 w-fit"><i class="fa-solid fa-left-long"></i> Back Home</a>
+    </section>
+</Layout>

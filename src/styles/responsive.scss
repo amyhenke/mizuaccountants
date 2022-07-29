@@ -17,6 +17,11 @@
             }
         }
     }
+    .pagenotfound {
+        h1 {
+            font-size: 3.5rem;
+        }
+    }
 }
 
 @media only screen and (max-width: 450px) {
@@ -39,7 +44,8 @@
 }
 
 @media only screen and (max-width: 350px) {
-    .hero {
+    .hero,
+    .pagenotfound {
         h1 {
             font-size: 2.5rem;
         }
