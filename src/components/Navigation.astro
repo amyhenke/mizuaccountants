@@ -1,3 +1,24 @@
+<script type="module">
+  //Accessibility - toggle mobile menu with keyboard
+  var menutoggle = document.querySelector("#menutoggle")
+  var menulabel = document.querySelector("#menulabel")
+
+  var enterKeyCode = 13
+  var spaceKeyCode = 32
+
+  menulabel.addEventListener("keyup", function (event) {
+    if (event.keyCode == enterKeyCode || event.keyCode == spaceKeyCode) {
+      var menuOpen = menutoggle.checked
+
+      if (menuOpen) {
+        menutoggle.checked = false
+      } else {
+        menutoggle.checked = true
+      }
+    }
+  })
+</script>
+
 <header class="fixed top-0 w-full">
   <input type="checkbox" class="navtoggleinput hidden" name="menusearch" id="menutoggle" />
   <nav class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8" aria-label="Main menu">
